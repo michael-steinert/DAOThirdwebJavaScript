@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DAO - Agile Software Development (thirdweb)
 
-## Getting Started
+* DAO stands for Decentralized Autonomous Organization
+* A DAO is an Organization without a single Leader; instead, Rules are encoded in the Blockchain (Smart Contracts)
+* It is completely transparent and everyone who participates has a Stake
+* Decisions are made via Voting amongst those who own non-fungible Tokens (NFTs) from the DAO, which grant Membership
+* A DAO is an Entity with no central Leadership
+* Decisions get made from the bottom-up, governed by a Community organized around a specific Set of Rules enforced on a Blockchain
 
-First, run the development server:
+## Thirdweb
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+* The DAO consists of the following three Smart Contracts:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    * EditionDrop Contract (ERC-1155 - NFT), Address: 0x11963Eb894f9d99891f855dc111768cE43b688a4
+    * Token Module (ERC-20 - Governance), Address: 0x9EB12B0b366ceF7a8EC4116aD5D575afEF7Ced47
+    * Vote Contract, Address: 0x40E8C66c2ee4945a3B0Af628Bfa0462C1489f398
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* The Governance Contract is set up to stop Voting after 24-Hours
+* That means after 24-Hours, if the Votes __for__ the Proposal are greater than Votes __against__ the Proposal, then any Member would be able to execute the Proposal via the Governance Contract
+* Proposals can not be executed automatically
+* Once a Proposal passes, any Member of the DAO can trigger the accepted Proposal
+* For Example: The Proposal for minting an additional 21 Token has more Votes for the Proposal as against it — then any Member can trigger the Proposal and the Contract will automatically mint the 21 Token
+* Therefore, Trust is not needed because the Blockchain will automatically execute the Action
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Token Tracker
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* A Token Tracker on an Explorer show the Total Supply of the Token and the following Information
+* Who holds these Token
+* Who is transferring around Tokens and how much Token are being moved around
